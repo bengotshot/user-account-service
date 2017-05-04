@@ -1,0 +1,42 @@
+version: '2.0'
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+  user-authorisation-api:
+    image: user-authorisation-api:latest
+    build: ./user-authorisation-api/
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./user-authorisation-api/src:/project/src/
+  user-management-api:
+    image: user-management-api:latest
+    build: ./user-management-api/
+    ports:
+      - "8082:8080"
+    volumes:
+      - ./user-management-api/src:/project/src/
+  user-accounts-loadbalancer:
+    image: user-accounts-loadbalancer:latest
+    build: ./load-balancer/
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./load-balancer/src:/project/src/
+    depends_on:
+      - user-authorisation-api
+      - user-management-api
+      - mongo
+      - redis
+    links:
+      - user-authorisation-api
+      - user-management-api
+      - mongo
+      - redis
+
