@@ -12,8 +12,8 @@ let authorise = (username, key)=> {
                 return redisClient.expireAsync(key, expiry);
             }
         });
+
 };
 
 
 export default authorise;
-

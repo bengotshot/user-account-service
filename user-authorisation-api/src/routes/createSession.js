@@ -2,7 +2,7 @@ import redis from '../redis/redis';
 let session = redis.session;
 
 let createSession = (req, res, next)=> {
-    session(req.get('username')).then((obj)=>{
+    session(req.body.email).then((obj)=>{
        res.json(obj);
     }, (err)=>{
         res.sendStatus(500);

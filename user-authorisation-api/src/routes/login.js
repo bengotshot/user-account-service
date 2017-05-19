@@ -1,7 +1,7 @@
 import mongo from '../mongo/mongo.js'
 
 let login = (req, res, next)=> {
-    mongo.login(req.get('username'), req.get('password')).then((result)=>{
+    mongo.login(req.body.email, req.body.password).then((result)=>{
         if(result === false) {
             res.sendStatus(401)
         } else{
