@@ -4,7 +4,6 @@ import mongoose from 'mongoose';
 import login from './routes/login';
 import createSession from './routes/createSession';
 import authorise from './routes/authorise';
-import calls from './calls/calls';
 
 let config = {};
 config.port = "8081";
@@ -17,8 +16,8 @@ let app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect(mongoUri).then(console.log(`Successfully connected to: ${mongoUri}`));
 mongoose.Promise = global.Promise;
+mongoose.connect(mongoUri).then(console.log(`Successfully connected to: ${mongoUri}`));
 
 
 //Routes

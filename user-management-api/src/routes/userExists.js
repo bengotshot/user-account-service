@@ -1,4 +1,4 @@
-import http from 'http';
+
 
 let userExists = (req, res, next)=> {
     http.get('http://user-authorisation-api:8081/user/auth/', (result)=>{

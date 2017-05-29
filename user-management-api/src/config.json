@@ -1,0 +1,4 @@
+{
+    "mongoUri": "mongodb://mongo:27017",
+    "port": "8082"
+}
