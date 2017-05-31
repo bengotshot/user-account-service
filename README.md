@@ -27,7 +27,6 @@ docker-compose run
 
 ### TODO
  - Push images to dockerhub, versioned (starting at 0.1)
- - Use alternative to math.random for session generation string
  - Update nginx.conf to tidy urls, and allow the same url to be used by both services depending on request type (PUT/POST)
  - Use http library to allow two apis to communicate, for update / delete
  - Create update endpoint in UMA
@@ -42,6 +41,7 @@ docker-compose run
  - Improve security measures
  - Implement logging
  - Create some form of documentation (maybe swagger?)
+ - Update nginx to place documentation on pretty URLs for both api's 
  - Host project online
  - Split user-auth-api in half. One for session management the other for validating details
  - Investigate OAuth V2.0
