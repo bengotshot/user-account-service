@@ -1,5 +1,5 @@
 import redisClient from './db';
-
+import {randomBytes} from 'crypto';
 const config = { expiry: 30};//TODO change where config is retrieved from
 const expiry = config.expiry * 60;
 
@@ -15,12 +15,8 @@ let session = (username)=> {
 
 
 let createHash = (username) =>{
-    //Random 24 digit key
-    //TODO - Use a better random generator. Math.random is not random
-    let key = Math.random().toString(36).substring(2, 26);
-
     return {
-        key,
+        key: randomBytes(12).toString('hex'),
         data : {
             username,
             expiryTime: expiry

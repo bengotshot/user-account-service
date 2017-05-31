@@ -34,7 +34,6 @@ docker-compose run
  - Create delete endpoint in UMA
  - Make registration fail if either username or email is taken
  - Write unit-tests
- - Figure out how to run these tests w/ docker + w/ nodemon
  - Make docker-compose.prod.yml
  - Enhance validation middleware
  - Share config between apis, at project root level (maybe)
