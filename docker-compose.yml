@@ -15,6 +15,7 @@ services:
       - "8081:8080"
     volumes:
       - ./user-authorisation-api/src:/project/src/
+      - ./user-authorisation-api/test:/project/test/
     depends_on:
       - mongo
       - redis
@@ -25,6 +26,7 @@ services:
       - "8082:8080"
     volumes:
       - ./user-management-api/src:/project/src/
+      - ./user-management-api/test:/project/test/
     depends_on:
       - mongo
   user-accounts-loadbalancer:
