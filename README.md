@@ -18,7 +18,7 @@ docker-compose build
 To run the project
 
 ```
-docker-compose run
+docker-compose up
 ```
 
 
@@ -27,24 +27,24 @@ docker-compose run
 
 ### TODO
  - Push images to dockerhub, versioned (starting at 0.1)
+ - Node v8.00 just got released, gotta check it out. Maybe use, and remove babel?
  - Update nginx.conf to tidy urls, and allow the same url to be used by both services depending on request type (PUT/POST)
  - Use http library to allow two apis to communicate, for update / delete
  - Create update endpoint in UMA
  - Create delete endpoint in UMA
  - Make registration fail if either username or email is taken
  - Write unit-tests
- - Make docker-compose.prod.yml
  - Enhance validation middleware
  - Share config between apis, at project root level (maybe)
  - Allow api config to be overwritten at runtime
  - Allow sharing of methods, variables etc via a shared folder (maybe)
  - Improve security measures
  - Implement logging
- - Create some form of documentation (maybe swagger?)
+ - Create documentation (maybe swagger?)
  - Update nginx to place documentation on pretty URLs for both api's 
  - Host project online
  - Split user-auth-api in half. One for session management the other for validating details
- - Investigate OAuth V2.0
+ - Investigate 0Auth V2.0
 
 
 Feel free to raise any issues and fixes, and to use this project for good and evil. Any questions just email me (benwallman@hotmail.com)
