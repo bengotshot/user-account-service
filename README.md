@@ -27,7 +27,6 @@ docker-compose up
 
 ### TODO
  - Push images to dockerhub, versioned (starting at 0.1)
- - Node v8.00 just got released, gotta check it out. Maybe use, and remove babel?
  - Update nginx.conf to tidy urls, and allow the same url to be used by both services depending on request type (PUT/POST)
  - Use http library to allow two apis to communicate, for update / delete
  - Create update endpoint in UMA

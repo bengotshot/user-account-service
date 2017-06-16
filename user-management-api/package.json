@@ -4,7 +4,7 @@
   "description": "User Management Api. Write api of the User-Account-Service",
   "main": "src/server.js",
   "scripts": {
-    "start": "nodemon src/server.js --exec babel-node --presets es2015,stage-2 -x 'npm run test:unit'",
+    "start": "nodemon src/server.js --exec babel-node --presets es2015,stage-2",
     "test:unit": "./node_modules/.bin/mocha --compilers js:babel-core/register --reporter progress test/unit"
   },
   "author": "Ben Wallman",

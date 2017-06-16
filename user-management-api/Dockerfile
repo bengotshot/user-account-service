@@ -1,4 +1,4 @@
-FROM node:7.3.0
+FROM node:8.1.2
 RUN mkdir -p /project/src
 WORKDIR /project
 COPY .babelrc /project

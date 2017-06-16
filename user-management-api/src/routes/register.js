@@ -5,8 +5,13 @@ let register = (req, res)=> {
     mongo.register(req.body.email, req.body.password).then(()=>{
         res.sendStatus(200);
     }, (err)=>{
-        console.log(err);
-        res.sendStatus(500);
+        console.err(err);
+        if(err && err.code === 11000) {
+            res.sendStatus(409)
+        } else{
+            res.sendStatus(500);
+        }
+
     });
 };
 
