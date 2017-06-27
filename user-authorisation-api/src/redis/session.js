@@ -4,8 +4,8 @@ const config = { expiry: 30};//TODO change where config is retrieved from
 const expiry = config.expiry * 60;
 
 
-let session = (username)=> {
-    let hash = createHash(username);
+let session = (email)=> {
+    let hash = createHash(email);
 
     return redisClient.hmsetAsync(hash.key, hash.data)
         .then( ()=> redisClient.expireAsync(hash.key, expiry)
@@ -14,11 +14,11 @@ let session = (username)=> {
 };
 
 
-let createHash = (username) =>{
+let createHash = (email) =>{
     return {
         key: randomBytes(12).toString('hex'),
         data : {
-            username,
+            email,
             expiryTime: expiry
         }
     };

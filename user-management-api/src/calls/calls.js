@@ -1,7 +1,7 @@
+import authorise from './authorise';
 
-let calls = (req, res)=> {
-    console.log("Made it");
-    res.sendStatus(418);
+const calls = {
+    authorise
 };
 
 export default calls;

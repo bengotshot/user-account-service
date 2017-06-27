@@ -3,13 +3,13 @@ const config = { expiry: 30};//TODO change where config is retrieved from
 const expiry = config.expiry * 60;
 
 
-let authorise = (username, key)=> {
-    return redisClient.hgetallAsync(key)
+let authorise = (email, session)=> {
+    return redisClient.hgetallAsync(session)
         .then((res)=>{
-            if(res.username !== username){
-                return new Promise( ({reject}) => reject());
+            if(!res || res.email !== email){
+                return new Promise( (resolve, reject) => reject());
             } else {
-                return redisClient.expireAsync(key, expiry);
+                return redisClient.expireAsync(session, expiry);
             }
         });
 

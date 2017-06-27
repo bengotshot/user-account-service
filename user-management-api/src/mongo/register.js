@@ -8,7 +8,8 @@ let register = (username, password)=> {
             return User({
                 username,
                 email: username,
-                passwordHash: hash
+                passwordHash: hash,
+                createdAt: new Date()
             }).save();
         })
 };

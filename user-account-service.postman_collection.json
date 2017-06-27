@@ -1,0 +1,121 @@
+{
+	"variables": [],
+	"info": {
+		"name": "user-account-service",
+		"_postman_id": "f27fe8fa-101b-ec73-934e-e2d15a0d048b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"request": {
+				"url": "localhost:8080/user/auth/auth",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"test001@test.com\",\n\t\"session\" : \"18d67b431b7da08c96e13361\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"url": "localhost:8080/user/auth/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"test001@test.com\",\n\t\"password\" : \"example\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"url": "localhost:8080/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"test001@test.com\",\n\t\"password\" : \"example\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"url": "localhost:8080/update",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"test001@test.com\",\n\t\"session\" : \"18d67b431b7da08c96e13361\",\n\t\"firstName\": \"Ben\",\n\t\"lastName\": \"Wallman\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"request": {
+				"url": "localhost:8080/user/details",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "test001@test.com",
+						"description": ""
+					},
+					{
+						"key": "session",
+						"value": "18d67b431b7da08c96e13361",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"test001@test.com\",\n\t\"key\" : \"d01d53e1e1c366bf3a518698\",\n\t\"firstName\": \"Ben\",\n\t\"lastName\": \"Wallman\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

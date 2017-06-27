@@ -26,19 +26,17 @@ docker-compose up
 
 
 ### TODO
+ - Create retrieve data endpoint
+ - Test routes with invalid session tokens
  - Push images to dockerhub, versioned (starting at 0.1)
- - Update nginx.conf to tidy urls, and allow the same url to be used by both services depending on request type (PUT/POST)
- - Use http library to allow two apis to communicate, for update / delete
- - Create update endpoint in UMA
+ - Update nginx.conf to tidy urls, and allow the same url to be used by both services depending on request type (PUT/POST). Current situation not very Restful
  - Create delete endpoint in UMA
- - Make registration fail if either username or email is taken
- - Write unit-tests
+ - Write more unit-tests
  - Enhance validation middleware
  - Share config between apis, at project root level (maybe)
  - Allow api config to be overwritten at runtime
  - Allow sharing of methods, variables etc via a shared folder (maybe)
  - Improve security measures
- - Implement logging
  - Create documentation (maybe swagger?)
  - Update nginx to place documentation on pretty URLs for both api's 
  - Host project online

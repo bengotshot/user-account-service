@@ -1,7 +1,9 @@
 import register from './register';
+import update from './update';
 
 const mongo = {
-    register
+    register,
+    update
 };
 
 export default mongo;

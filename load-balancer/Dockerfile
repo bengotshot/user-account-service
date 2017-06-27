@@ -8,5 +8,5 @@ WORKDIR /etc/nginx
 ADD nginx.conf /etc/nginx/nginx.conf
 CMD nginx -g 'daemon off;'
 
-# Expose ports.
+# Expose ports
 EXPOSE 8080

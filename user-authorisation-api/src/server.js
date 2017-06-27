@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import login from './routes/login';
 import createSession from './routes/createSession';
 import authorise from './routes/authorise';
+import retrieve from './routes/retrieve';
 
 let config = {};
 config.port = "8081";
@@ -25,7 +26,7 @@ app.post('/user/auth/login', login, createSession);
 
 app.post('/user/auth/auth', authorise);
 
-app.get('/user/auth', ({res}) => res.send("Hello world"));
+app.get('/user/details', retrieve);
 
 app.use('*', ({res}) => res.sendStatus(404));
 
