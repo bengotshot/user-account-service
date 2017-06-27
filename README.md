@@ -1,4 +1,4 @@
-User-account-service
+# User-account-service #
 
 User account service is a collection of servers which allows for the Creating, Reading, Updating and Deleting of Users.
 
@@ -26,22 +26,20 @@ docker-compose up
 
 
 ### TODO
- - Create retrieve data endpoint
  - Test routes with invalid session tokens
  - Push images to dockerhub, versioned (starting at 0.1)
- - Update nginx.conf to tidy urls, and allow the same url to be used by both services depending on request type (PUT/POST). Current situation not very Restful
+ - Update nginx.conf to tidy urls, and allow the same url to be used by both services depending on request type (PUT/POST). Current situation not very Restful :(
  - Create delete endpoint in UMA
  - Write more unit-tests
  - Enhance validation middleware
- - Share config between apis, at project root level (maybe)
+ - Share config between apis, ()maybe at project root level)
  - Allow api config to be overwritten at runtime
  - Allow sharing of methods, variables etc via a shared folder (maybe)
  - Improve security measures
- - Create documentation (maybe swagger?)
  - Update nginx to place documentation on pretty URLs for both api's 
  - Host project online
  - Split user-auth-api in half. One for session management the other for validating details
- - Investigate 0Auth V2.0
+ - Get nginx to redirect the user to the github project page
 
 
 Feel free to raise any issues and fixes, and to use this project for good and evil. Any questions just email me (benwallman@hotmail.com)
