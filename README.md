@@ -4,7 +4,7 @@ User account service is a collection of servers which allows for the Creating, R
 
 It's a demonstration of the architectural principle of Command Query Responsibility Segregation (CQRS), utilising multiple node servers, redis, MongoDB and a load-balancer (nGinx) bound together with docker-compose.
 
-Due to being built with Docker, the only requirement is Docker (v17+) which can be found [here](https://www.docker.com/get-docker).
+To build & run, the only requirement is Docker (v17+) which can be found [here](https://www.docker.com/get-docker).
 
 
 ----------
