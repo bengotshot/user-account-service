@@ -24,6 +24,10 @@ docker-compose up
 
 ----------
 
+To see all the endpoints and how to use them, import the user-account-service.postman_collection.json into postman
+
+
+----------
 
 ### TODO
  - Test routes with invalid session tokens
